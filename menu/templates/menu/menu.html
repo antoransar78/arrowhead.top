@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<!-- This is Hero Section-->
+<div class="container mt-3 ">
+    <h1 class="text-center">What's on the menu?</h1>
+    <button type="button" class="btn btn-primary mb-3"><a class="text-white" href="http://m.me/arrowheadgrilbd">For Reservation</a></button>
+    
+    <div class="row">
+        {% for image in items %}
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ image.image.url }}" class="card-img-top" alt="Menu Image {{ forloop.counter }}">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

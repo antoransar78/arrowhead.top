@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>{% block title %}Modern Business - Start Bootstrap Template{% endblock %}</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+        <style>
+            #id_service_rating, #id_food_rating, #id_drinks_rating, #id_ambience_rating, #id_cleanliness_rating, #id_order, #id_visit_reason,#id_heard_about_us {
+                list-style-type: none;
+                display: inline-flex;
+              }
+              #id_service_rating, #id_food_rating, #id_drinks_rating, #id_ambience_rating, #id_cleanliness_rating, #id_order, #id_visit_reason,#id_heard_about_us > li {
+                padding: auto;
+              }
+
+              .btn {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+              }
+              
+              .btn:hover {
+                background-color: #0056b3;
+              }
+              
+              .text-danger {
+                color: red;
+              }
+              
+              .alert {
+                background-color: #f8d7da;
+                color: #721c24;
+                padding: 10px;
+                border-radius: 4px;
+              }
+              h1 {
+                text-align: center;
+                font-weight: bold;
+              }
+              
+              form {
+                display: flex;
+                flex-direction: column;
+              }
+              
+              .form-group {
+                margin-bottom: 15px;
+              }
+              
+              label {
+                font-weight: normal;
+                font-size: 90%;
+                padding-right: 10px;
+              }
+              
+              input[type="text"], input[type="email"], textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              }
+
+              body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                
+              }
+
+        </style>
+
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NFLD5RJZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </head>
+<!-- Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="{% url 'slider_view' %}">Arrowhead Grill</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'slider_view' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'menu_view' %}">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'customer_form' %}">Form</a></li>
+                 <!--
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                            <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
+                            <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                            <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
+                            <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li>
+                        </ul>
+                    </li>
+                    -->   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    {% block content %}
+    <h1>This is layout page</h1>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Arrowhead Grill 2024</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFLD5RJZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    </body>
+</html>

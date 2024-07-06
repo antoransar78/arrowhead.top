@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<!-- This is Hero Section-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 mt-3">
+            <h1>Customer Feedback</h1>
+    <p>We appreciate your feedback. Please fill out the form below.</p>
+            <form action="POST" enctype="martipart/form-data">
+                {% csrf_token %}
+                {% for fm in form %}
+                    <div class="form-group mb-2 my-2">
+                        {{fm.label_tag}} {{fm}} <small class="text-denger">{{fm.errors|striptags}}</small>
+                    </div>
+                {% endfor %}
+                <input type="submit" value="Submit" class="btn btn-primary mb-4 mt-3" name="" id="">
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        <p class="alert alert-denger my-3 ">{{error}}</p>
+                    {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

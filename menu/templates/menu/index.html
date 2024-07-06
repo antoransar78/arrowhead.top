@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<!-- This is Hero Section-->
+
+            <!-- Header-->
+            <header class="bg-dark py-5">
+              <div class="container px-5">
+                  <div class="row gx-5 align-items-center justify-content-center">
+                      <div class="col-lg-8 col-xl-7 col-xxl-6">
+                          <div class="my-5 text-center text-xl-start">
+                              <h1 class="display-5 fw-bolder text-white mb-2">Visit Our Restaurant</h1>
+                              <p class="lead fw-normal text-white-50 mb-4">Discover a world of culinary bliss at Arrowhead Grill!</p>
+                              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                  <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'menu_view' %}">Menu</a>
+                                  <a class="btn btn-outline-light btn-lg px-4" href="{% url 'customer_form' %}">Feedback Form</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                  </div>
+              </div>
+          </header>
+
+                      <!-- Features section-->
+                      <section class="py-5" id="features">
+                        <div class="container px-5 my-5">
+                            <div class="row gx-5">
+                                <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Our Service</h2></div>
+                                <div class="col-lg-8">
+                                    <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                        <div class="col mb-5 h-100">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                            <h2 class="h5">Master Chef</h2>
+                                            <p class="mb-0">Our head chef brings years of experience and culinary expertise to the kitchen, crafting exquisite dishes that are sure to delight your taste buds. With a passion for innovation and a commitment to quality, every meal is a masterpiece.</p>
+                                        </div>
+                                        <div class="col mb-5 h-100">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                            <h2 class="h5">Quality Food</h2>
+                                            <p class="mb-0">We pride ourselves on serving only the highest quality food, prepared with the freshest ingredients. Our commitment to excellence ensures that every bite is a flavorful experience you won’t forget.</p>
+                                        </div>
+                                        <div class="col mb-5 mb-md-0 h-100">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                            <h2 class="h5">Online Order</h2>
+                                            <p class="mb-0">Enjoy our delicious offerings from the comfort of your home with our convenient online ordering system. Just a few clicks and your favorite dishes will be on their way to your doorstep.</p>
+                                        </div>
+                                        <div class="col h-100">
+                                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                            <h2 class="h5">12/7 Service</h2>
+                                            <p class="mb-0">We are dedicated to serving you better, offering 12/7 service to cater to your dining needs. Whether it's early morning or late night, we're here to provide you with excellent food and customer service.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Testimonial section-->
+                    <div class="py-5 bg-light">
+                        <div class="container px-5 my-5">
+                            <div class="row gx-5 justify-content-center">
+                                <div class="col-lg-10 col-xl-7">
+                                    <div class="text-center">
+                                        <div class="fs-4 mb-4 fst-italic">"A great place for meat lovers with platters that are absolutely worth it. We had the El Dorado platter and it was delicious and filling. The meats were well cooked to the right temperature that we wanted, recommend medium rare for the steaks. The accompaniments of sauces and sides were also tasty. The cream of mushroom soup as a starter was a surprisingly scrumptious pick. Service staff were friendly and attended to us quickly. Was not too busy for a weekend lunch. Recommended, especially if you want to embrace your inner carnivore."</div>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                            <div class="fw-bold">
+                                                Shahriar Ratul
+                                                <!--<span class="fw-bold text-primary mx-1">/</span>
+                                                Shahriar Ratul-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+
+                    <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                      <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                          <div class="mb-4 mb-xl-0">
+                              <div class="fs-3 fw-bold text-white">New products, delivered to you.</div>
+                              <div class="text-white-50">Sign up for our newsletter for the latest updates.</div>
+                          </div>
+                          <div class="ms-xl-4">
+                              <div class="input-group mb-2">
+                                  <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
+                                  <button class="btn btn-outline-light" id="button-newsletter" type="button">Sign up</button>
+                              </div>
+                              <div class="small text-white-50">We care about privacy, and will never share your data.</div>
+                          </div>
+                      </div>
+                  </aside>                    
+
+        
+
+{% endblock %}
